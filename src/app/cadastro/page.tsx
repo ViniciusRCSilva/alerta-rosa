@@ -22,7 +22,7 @@ export default function Cadastro() {
           <p>por aqui?</p>
         </div>
 
-        <Image src={RegsiterWomen} alt="mulher resgistro" className="drop-shadow-heartWomen z-0" />
+        <Image src={RegsiterWomen} alt="mulher resgistro" className="z-0" />
 
         <div className="flex flex-col items-center text-2xl font-light z-10">
           <p>Faça aqui sua conta!</p>

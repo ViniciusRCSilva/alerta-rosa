@@ -23,7 +23,7 @@ export default function Login() {
           <p>Bem-Vinda!</p>
         </div>
 
-        <Image src={HeartWomen} alt="mulher segurando coração" className="drop-shadow-heartWomen z-0" />
+        <Image src={HeartWomen} alt="mulher segurando coração" className="z-0" />
 
         <div className="flex flex-col items-center text-2xl font-light z-10">
           <p>Aqui</p>
