@@ -5,29 +5,9 @@ import Link from 'next/link'
 
 export default function Login() {
   return (
-    <div
-      className="flex flex-col w-full lg:w-[50%] h-full items-center justify-center gap-5 lg:gap-10
-        text-dark-blue 
-        lg:bg-[url('../../public/right_side_background.svg')] 
-        bg-[url('../../public/mobile_background_login.svg')] bg-no-repeat bg-center bg-cover"
+    <div 
+      className='flex flex-col items-center justify-center gap-5 lg:gap-10 animate-screenOpacity'
     >
-      {/* Logo */}
-      <Image
-        src={'logo.svg'}
-        alt="logo"
-        className="hidden lg:flex"
-        height={300}
-        width={300}
-      />
-
-      <Image
-        src={'logo.svg'}
-        alt="logo"
-        className="flex lg:hidden"
-        height={200}
-        width={200}
-      />
-
       {/* Título */}
       <p className="font-bold text-3xl">LOGIN</p>
 
