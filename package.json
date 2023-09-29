@@ -15,11 +15,12 @@
     "react-dom": "latest"
   },
   "devDependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
-    "eslint": "latest",
+    "eslint": "^8.50.0",
     "eslint-config-next": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
