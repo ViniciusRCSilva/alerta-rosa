@@ -25,7 +25,7 @@ export function Topbar() {
         </div>
 
         <div className="flex lg:hidden flex-row text-white gap-5">
-          <List className='text-2xl' />
+          <List className="text-2xl" />
         </div>
       </div>
     </div>

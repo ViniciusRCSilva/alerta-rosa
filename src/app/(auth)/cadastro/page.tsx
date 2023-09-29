@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Register() {
   return (
-      <div className='flex flex-col items-center justify-center gap-5 lg:gap-10 animate-screenOpacity'>
+      <div className="flex flex-col items-center justify-center gap-5 lg:gap-10 animate-screenOpacity">
         {/* Título */}
         <p className="font-bold text-3xl">CADASTRO</p>
 

@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Login() {
   return (
     <div 
-      className='flex flex-col items-center justify-center gap-5 lg:gap-10 animate-screenOpacity'
+      className="flex flex-col items-center justify-center gap-5 lg:gap-10 animate-screenOpacity"
     >
       {/* Título */}
       <p className="font-bold text-3xl">LOGIN</p>
