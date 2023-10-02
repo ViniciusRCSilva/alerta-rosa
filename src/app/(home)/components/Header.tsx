@@ -1,8 +1,6 @@
-'use client'
-
-import { List } from '@phosphor-icons/react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { IconMenu } from './IconMenu'
 
 export function Header() {
   return (
@@ -20,7 +18,7 @@ export function Header() {
         </div>
 
         <div className="flex lg:hidden flex-row text-white gap-5">
-          <List className="text-2xl" />
+          <IconMenu />
         </div>
       </div>
     </div>
