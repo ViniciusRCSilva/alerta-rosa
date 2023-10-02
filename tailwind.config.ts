@@ -8,13 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors:{
-        "pink": "#DC05FF",
-        "dark-blue": "#2F2E41",
+      colors: {
+        pink: '#DC05FF',
+        'dark-blue': '#2F2E41',
       },
       boxShadow: {
-        'inner-shadow': '-12px 0px 10px 0px rgba(0, 0, 0, 0.25) inset'
-      }
+        'inner-shadow': '-12px 0px 10px 0px rgba(0, 0, 0, 0.25) inset',
+      },
     },
     keyframes: {
       screenOpacity: {
@@ -24,7 +24,7 @@ const config: Config = {
     },
     animation: {
       screenOpacity: 'screenOpacity 0.5s ease-in-out',
-    }
+    },
   },
   plugins: [],
 }
