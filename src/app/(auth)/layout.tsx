@@ -1,4 +1,7 @@
 import Image from 'next/image'
+import { Lexend } from 'next/font/google'
+
+const lexend = Lexend({ subsets: ['latin'] })
 
 export default function AuthLayout({
   children,
@@ -7,7 +10,7 @@ export default function AuthLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={lexend.className}>
         <main className="flex flex-row w-full h-screen items-center justify-between">
           {/* Conteúdo da esquerda */}
           <div
