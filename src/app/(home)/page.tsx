@@ -11,7 +11,7 @@ export default function Home() {
           <h1 className="text-4xl md:text-8xl font-semibold uppercase">
             Formulário
           </h1>
-          <span className="block md:w-3/4 font-light text-center lg:text-justify text-xl lg:text-2xl px-8 lg:p-0">
+          <span className="block md:w-3/4 font-light text-center lg:text-justify text-lg lg:text-2xl px-8 lg:p-0">
             Nosso formulário de conscientização é uma ferramenta educativa que
             ajudará você a compreender os diferentes aspectos da violência
             contra a mulher, incluindo violência física e psicológica. Ao
