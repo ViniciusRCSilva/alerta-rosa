@@ -11,7 +11,7 @@ export function Header() {
         </Link>
 
         <div className="hidden lg:flex flex-row text-white gap-5">
-          <Link href="">Opção</Link>
+          <Link href="">Formulário</Link>
           <Link href="">Opção</Link>
           <Link href="">Opção</Link>
           <Link href="">Usuário</Link>
