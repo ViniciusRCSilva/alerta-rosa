@@ -2,6 +2,7 @@
 import { Icon, Menu, MenuButton, MenuList } from '@chakra-ui/react'
 import { List } from '@phosphor-icons/react'
 import Link from 'next/link'
+import { DrawerProfile } from './DrawerProfile'
 
 export function IconMenu() {
   return (
@@ -29,9 +30,7 @@ export function IconMenu() {
           <Link href="" className="mr-5">
             Opção
           </Link>
-          <Link href="" className="mr-5">
-            Usuário
-          </Link>
+          <DrawerProfile />
         </div>
       </MenuList>
     </Menu>

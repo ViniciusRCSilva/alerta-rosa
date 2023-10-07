@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Member } from './components/Member'
 
-export default function aboutUs() {
+export default function AboutUs() {
   return (
     <main>
       <div
@@ -10,7 +10,7 @@ export default function aboutUs() {
         bg-[url('../../public/initial_background_mobile.svg')]
         lg:bg-[url('../../public/initial_background.svg')] bg-no-repeat bg-center bg-cover"
       >
-        <main className="gap-14 h-full w-full flex flex-col items-center lg:items-end justify-center animate-screenOpacity">
+        <div className="gap-14 h-full w-full flex flex-col items-center lg:items-end justify-center animate-screenOpacity">
           <Image
             src={'logo.svg'}
             alt="logo"
@@ -28,15 +28,15 @@ export default function aboutUs() {
           />
 
           <div className="flex flex-col items-center lg:items-end text-center lg:text-right">
-            <h1 className="text-2xl lg:text-7xl font-semibold uppercase">
+            <span className="text-2xl lg:text-7xl font-semibold uppercase">
               LUTANDO PELO FUTURO
-            </h1>
+            </span>
 
-            <h3 className="font-light text-xl lg:text-5xl">
+            <span className="font-light text-xl lg:text-5xl">
               Conscientização contra violência
-            </h3>
+            </span>
           </div>
-        </main>
+        </div>
       </div>
       <div
         className="flex flex-col items-start justify-start h-screen w-full p-1 md:p-10 lg:p-20
@@ -45,9 +45,9 @@ export default function aboutUs() {
         lg:bg-[url('../../public/liquid_background.svg')] bg-no-repeat bg-center bg-cover"
       >
         <main className="gap-20 h-full w-full flex flex-col items-center lg:items-start justify-center">
-          <h1 className="text-4xl lg:text-6xl font-semibold uppercase text-center">
+          <span className="text-4xl lg:text-6xl font-semibold uppercase text-center">
             QUAL NOSSO PROPÓSITO?
-          </h1>
+          </span>
           <span className="block lg:w-3/4 font-light text-2xl lg:text-4xl text-center lg:text-justify px-8 lg:p-0">
             Nosso propósito é despertar consciências, <br /> construir
             solidariedade e <br />
@@ -62,10 +62,10 @@ export default function aboutUs() {
       >
         <main className="gap-20 h-full w-full flex flex-col items-center lg:items-start justify-center">
           <div className="flex w-full justify-center lg:justify-end">
-            <h1 className="text-center lg:text-end text-4xl md:text-8xl font-semibold uppercase">
+            <span className="text-center lg:text-end text-4xl md:text-8xl font-semibold uppercase">
               EQUIPE DO ALERTA
-              <h1 className="text-pink">ROSA</h1>
-            </h1>
+              <span className="text-pink">ROSA</span>
+            </span>
           </div>
           <div className="flex w-full justify-center">
             <div className="flex flex-col gap-5 lg:grid lg:grid-cols-3">

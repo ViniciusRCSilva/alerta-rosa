@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import { EnvelopeSimple, Password } from '@phosphor-icons/react'
 import Link from 'next/link'
+import { Icon } from '@chakra-ui/react'
 
 export default function Login() {
   return (
@@ -12,7 +13,13 @@ export default function Login() {
       {/* Formulário */}
       <div className="flex flex-col gap-5">
         <div className="flex flex-row items-center rounded-full border-2 p-2 px-5 border-pink bg-white">
-          <EnvelopeSimple className="text-2xl text-pink" />
+          <Icon
+            as={EnvelopeSimple}
+            height={5}
+            width={5}
+            fontSize={'2xl'}
+            textColor={'#DC05FF'}
+          />
           <input
             className="px-2 focus:outline-none"
             type="email"
@@ -21,7 +28,13 @@ export default function Login() {
           />
         </div>
         <div className="flex flex-row items-center rounded-full border-2 p-2 px-5 border-pink bg-white">
-          <Password className="text-2xl text-pink" />
+          <Icon
+            as={Password}
+            height={5}
+            width={5}
+            fontSize={'2xl'}
+            textColor={'#DC05FF'}
+          />
           <input
             className="px-2 focus:outline-none"
             type="password"
