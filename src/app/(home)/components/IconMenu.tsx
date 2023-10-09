@@ -20,16 +20,10 @@ export function IconMenu() {
         outline={'nome'}
         border={'none'}
       >
-        <div className="flex flex-col items-end justify-center text-white gap-5">
-          <Link href="" className="mr-5">
-            Formulário
-          </Link>
-          <Link href="" className="mr-5">
-            Opção
-          </Link>
-          <Link href="" className="mr-5">
-            Opção
-          </Link>
+        <div className="flex flex-col items-end justify-center text-white gap-5 pr-5">
+          <Link href="">Formulário</Link>
+          <Link href="">Opção</Link>
+          <Link href="">Opção</Link>
           <DrawerProfile />
         </div>
       </MenuList>
