@@ -61,45 +61,49 @@ export default function AboutUs() {
         bg-white"
       >
         <main className="gap-20 h-full w-full flex flex-col items-center lg:items-start justify-center">
-          <div className="flex w-full justify-center lg:justify-end">
-            <span className="text-center lg:text-end text-4xl md:text-8xl font-semibold uppercase">
+          <div className="flex w-full justify-center">
+            <span className="text-center text-4xl md:text-8xl font-semibold uppercase">
               EQUIPE DO ALERTA
-              <span className="text-pink">ROSA</span>
+              <span className="text-pink pl-2 lg:pl-6">ROSA</span>
             </span>
           </div>
           <div className="flex w-full justify-center">
             <div className="flex flex-col gap-5 lg:grid lg:grid-cols-3">
               <Member
-                link="https://github.com/ViniciusRCSilva"
-                image="https://avatars.githubusercontent.com/u/71902143?v=4"
-                name="Vinicius Rodrigues"
-              />
-
-              <Member
-                link="https://github.com/Lemos0250"
-                image="https://avatars.githubusercontent.com/u/79033128?v=4"
-                name="João Victor"
-              />
-
-              <Member
-                link="https://github.com/davi-souza2001"
-                image="https://avatars.githubusercontent.com/u/77704994?v=4"
-                name="Davi Souza"
-              />
-
-              <Member
-                link="https://github.com/palomaalves"
+                link="https://www.linkedin.com/in/paloma-alves1006/"
                 image="https://avatars.githubusercontent.com/u/60614988?v=4"
                 name="Paloma Alves"
               />
 
               <Member
-                link="https://github.com/arthurcant"
+                link="https://www.linkedin.com/in/juliete-s%C3%A9rvio-503bb76a/"
+                image="https://media.licdn.com/dms/image/D4D03AQGUwXM-XAla_g/profile-displayphoto-shrink_200_200/0/1685278603835?e=1702512000&v=beta&t=9LFLo9-bqK-vxmXFV7jqm6Rhlockp5uLPJIDiWf_-vI"
+                name="Juliete Sérvio"
+              />
+
+              <Member
+                link="https://www.linkedin.com/in/arthur-silva-8a841b172/"
                 image="https://avatars.githubusercontent.com/u/54423057?v=4"
                 name="Arthur Cavalcante"
               />
 
-              <Member link="logo.svg" image="" name="Juliete Sérvio" />
+              <Member
+                link="https://www.linkedin.com/in/davi-souza2001/"
+                image="https://avatars.githubusercontent.com/u/77704994?v=4"
+                name="Davi Souza"
+              />
+
+              <Member
+                link="https://www.linkedin.com/in/jo%C3%A3o-lemos-781044207/"
+                image="https://avatars.githubusercontent.com/u/79033128?v=4"
+                name="João Victor"
+              />
+
+              <Member
+                link="https://www.linkedin.com/in/vinicius-rc-silva/"
+                image="https://avatars.githubusercontent.com/u/71902143?v=4"
+                name="Vinicius Rodrigues"
+              />
             </div>
           </div>
         </main>
