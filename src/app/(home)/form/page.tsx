@@ -1,4 +1,4 @@
-import { Icon, Progress } from '@chakra-ui/react'
+import { Progress } from '@chakra-ui/react'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 
 export default function Form() {
