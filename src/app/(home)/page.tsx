@@ -7,7 +7,7 @@ export default function Home() {
         bg-[url('../../public/mobile_main_content.svg')]
         lg:bg-[url('../../public/main_content.svg')] bg-no-repeat bg-center bg-cover"
       >
-        <main className="gap-10 h-full w-full flex flex-col items-center lg:items-start justify-center animate-screenOpacity">
+        <div className="gap-10 h-full w-full flex flex-col items-center lg:items-start justify-center animate-screenOpacity">
           <h1 className="text-4xl md:text-8xl font-semibold uppercase">
             Formulário
           </h1>
@@ -22,7 +22,7 @@ export default function Home() {
           <button className="h-12 w-52 flex items-center justify-center p-5 bg-white rounded-full text-pink transition-all hover:bg-slate-200">
             Iniciar Formulário
           </button>
-        </main>
+        </div>
       </div>
     </main>
   )
