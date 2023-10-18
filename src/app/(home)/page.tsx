@@ -19,7 +19,7 @@ export default function Home() {
             violentômetro e obter uma visão mais clara sobre os diversos tipos
             de violência e seus impactos.
           </span>
-          <button className="h-12 w-52 flex items-center justify-center p-5 bg-white rounded-full text-pink transition-all hover:bg-slate-200">
+          <button className="h-12 w-52 flex items-center justify-center p-5 bg-white rounded-full text-pink transition-all border-2 border-transparent hover:border-pink">
             Iniciar Formulário
           </button>
         </div>

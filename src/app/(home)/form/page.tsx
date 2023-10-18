@@ -19,7 +19,7 @@ export default function Form() {
         />
         <span className="mx-5 text-2xl font-semibold">1/5</span>
       </div>
-      <div className="h-96 w-full py-10 px-20 text-xl flex items-start lg:items-center text-center justify-center overflow-y-auto">
+      <div className="h-96 w-full py-10 px-20 text-xl flex items-start lg:items-center text-center justify-center overflow-y-auto animate-screenOpacity">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
           excepturi delectus maiores alias necessitatibus? Animi sapiente labore
