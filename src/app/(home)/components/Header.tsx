@@ -14,7 +14,7 @@ export function Header() {
         </Link>
 
         <div className="hidden lg:flex flex-row items-center justify-center text-white gap-5">
-          <Link href="">Formulário</Link>
+          <Link href="/">Formulário</Link>
           <Link href="">Opção</Link>
           <Link href="">Opção</Link>
           <DrawerProfile />

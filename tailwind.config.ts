@@ -14,6 +14,7 @@ const config: Config = {
       },
       boxShadow: {
         'inner-shadow': '-12px 0px 10px 0px rgba(0, 0, 0, 0.25) inset',
+        'form-shadow': '0px 8px 10px 0px rgba(0, 0, 0, 0.25) inset',
       },
     },
     keyframes: {

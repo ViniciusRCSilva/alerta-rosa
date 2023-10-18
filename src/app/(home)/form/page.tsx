@@ -1,3 +1,4 @@
+'use client'
 import { Progress } from '@chakra-ui/react'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 
@@ -14,11 +15,11 @@ export default function Form() {
           size="md"
           value={50}
           h={5}
-          className="w-96 ml-10 rounded-lg"
+          className="w-96 ml-10 rounded-full"
         />
         <span className="mx-5 text-2xl font-semibold">1/5</span>
       </div>
-      <div className="h-96 w-full py-10 px-20 text-xl flex items-start lg:items-center justify-center overflow-y-auto">
+      <div className="h-96 w-full py-10 px-20 text-xl flex items-start lg:items-center text-center justify-center overflow-y-auto">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
           excepturi delectus maiores alias necessitatibus? Animi sapiente labore
@@ -35,24 +36,24 @@ export default function Form() {
           reiciendisLorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
       </div>
-      <div className="fixed bottom-0 h-44 w-full flex items-center justify-between bg-white text-black rounded-t-xl shadow-2xl">
-        <div className="ml-5 w-32 hidden lg:flex items-center justify-between text-2xl cursor-pointer">
-          <div className="text-4xl">
+      <div className="fixed bottom-0 h-44 w-full flex items-center justify-between bg-white text-dark-blue shadow-form-shadow">
+        <div className="ml-5 flex items-center justify-between text-base lg:text-xl cursor-pointer">
+          <div className="text-lg lg:text-4xl text-pink">
             <HiChevronLeft />
           </div>
           <p className="font-light">Voltar</p>
         </div>
-        <div className="w-96 flex items-center justify-between">
-          <p className="h-10 w-32 flex items-center justify-center border-2 border-pink text-pink rounded-full font-bold cursor-pointer transition-all hover:bg-purple-100">
+        <div className="w-36 lg:w-96 flex items-center justify-between">
+          <p className="h-10 w-16 lg:w-32 flex items-center justify-center border-2 border-pink text-pink rounded-full font-bold cursor-pointer transition-all opacity-60 hover:opacity-100">
             Sim
           </p>
-          <p className="h-10 w-32 flex items-center justify-center border-2 border-pink text-pink rounded-full font-bold cursor-pointer transition-all hover:bg-purple-100">
+          <p className="h-10 w-16 lg:w-32 flex items-center justify-center border-2 border-pink text-pink rounded-full font-bold cursor-pointer transition-all opacity-60 hover:opacity-100">
             Não
           </p>
         </div>
-        <div className="mr-5 w-40 hidden lg:flex items-center justify-between text-2xl cursor-pointer">
+        <div className="mr-5 flex items-center justify-between text-base lg:text-xl cursor-pointer">
           <p className="font-light">Continuar</p>
-          <div className="text-4xl">
+          <div className="text-lg lg:text-4xl text-pink">
             <HiChevronRight />
           </div>
         </div>

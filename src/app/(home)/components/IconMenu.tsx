@@ -21,7 +21,7 @@ export function IconMenu() {
         border={'none'}
       >
         <div className="flex flex-col items-end justify-center text-white gap-5 pr-5">
-          <Link href="">Formulário</Link>
+          <Link href="/">Formulário</Link>
           <Link href="">Opção</Link>
           <Link href="">Opção</Link>
           <DrawerProfile />
