@@ -5,8 +5,8 @@ interface ItemTabelaProps {
 
 export function ItemTabela(props: ItemTabelaProps) {
   return (
-    <div className="flex gap-2 items-center">
-      <div className={`w-72 h-12 rounded-full ${props.color}`} />
+    <div className="flex gap-5 items-center w-full">
+      <div className={`w-24 h-6 rounded-full bg-[${props.color}]`} />
       <p>{props.name}</p>
     </div>
   )

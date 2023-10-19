@@ -10,16 +10,39 @@ export default function Resultado() {
             bg-[url('../../public/mobile_main_content.svg')]
             lg:bg-[url('../../public/main_content.svg')] bg-no-repeat bg-center bg-cover"
       >
-        <div className="flex w-full lg:w-1/2 lg:h-full h-screen justify-center items-center bg-white text-dark-blue">
-          <ItemTabela name="Chantagear" color="#FFD56A" />
+        <div className="flex flex-col w-full justify-center lg:w-1/2 h-screen gap-5 pl-52 bg-white text-dark-blue">
+          <div className="flex flex-col w-full gap-2 animate-screenOpacity">
+            <ItemTabela name="Chantagear" color="#FFD56A" />
+            <ItemTabela name="Mentir e enganar" color="#FFD56A" />
+            <ItemTabela name="Ignorar" color="#FFD56A" />
+            <ItemTabela name="Ciúmes excessivos" color="#FFD56A" />
+            <ItemTabela name="Ofender e humilhar" color="#FFD56A" />
+            <ItemTabela name="Intimidar e ameaçar" color="#FFD56A" />
+            <ItemTabela name="Proibir e controlar" color="#FFD56A" />
+          </div>
+          <div className="flex flex-col w-full gap-2 animate-screenOpacity">
+            <ItemTabela name="Destruir bens pessoais" color="#FF9D43" />
+            <ItemTabela name="Machucar e agredir" color="#FF9D43" />
+            <ItemTabela name="Empurrar" color="#FF9D43" />
+            <ItemTabela name="Golpear" color="#FF9D43" />
+            <ItemTabela name="Chutar" color="#FF9D43" />
+          </div>
+          <div className="flex flex-col w-full gap-2 animate-screenOpacity">
+            <ItemTabela name="Confinar e prender" color="#E86161" />
+            <ItemTabela name="Ameaçar com armas" color="#E86161" />
+            <ItemTabela name="Ameaçar de morte" color="#E86161" />
+            <ItemTabela name="Abusar sexualmente" color="#E86161" />
+            <ItemTabela name="Espancar e multilar" color="#E86161" />
+            <ItemTabela name="Matar - Feminicídio" color="#E86161" />
+          </div>
         </div>
 
-        <div className="gap-10 lg:h-full h-screen w-full lg:w-1/2 flex flex-col items-center lg:items-start justify-center my-10 lg:m-0 animate-screenOpacity">
+        <div className="gap-10 lg:h-full h-screen w-full lg:w-1/2 flex flex-col items-center justify-center my-10 lg:m-0 animate-screenOpacity">
           <h1 className="text-4xl md:text-6xl lg:text-left text-center font-semibold uppercase">
             Importância do Violentômetro
           </h1>
 
-          <div className="flex flex-col gap-10 items-center lg:grid lg:grid-cols-2 w-full lg:h-2/5">
+          <div className="flex flex-col gap-10 justify-center items-center lg:grid lg:grid-cols-2 w-full lg:h-2/5">
             <ButtonInfo
               name="Conscientização e Educação"
               content="O violentômetro ajuda as pessoas a compreender e reconhecer diferentes formas de violência, muitas das quais podem não ser evidentes à primeira vista. Isso é essencial para educar o público sobre a extensão e a complexidade do problema."
