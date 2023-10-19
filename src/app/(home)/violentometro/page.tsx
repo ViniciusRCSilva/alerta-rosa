@@ -10,30 +10,26 @@ export default function Resultado() {
             bg-[url('../../public/mobile_main_content.svg')]
             lg:bg-[url('../../public/main_content.svg')] bg-no-repeat bg-center bg-cover"
       >
-        <div className="flex flex-col w-full justify-center lg:w-1/2 h-screen gap-5 pl-52 bg-white text-dark-blue">
-          <div className="flex flex-col w-full gap-2 animate-screenOpacity">
-            <ItemTabela name="Chantagear" color="#FFD56A" />
-            <ItemTabela name="Mentir e enganar" color="#FFD56A" />
-            <ItemTabela name="Ignorar" color="#FFD56A" />
-            <ItemTabela name="Ciúmes excessivos" color="#FFD56A" />
-            <ItemTabela name="Ofender e humilhar" color="#FFD56A" />
-            <ItemTabela name="Intimidar e ameaçar" color="#FFD56A" />
-            <ItemTabela name="Proibir e controlar" color="#FFD56A" />
-          </div>
-          <div className="flex flex-col w-full gap-2 animate-screenOpacity">
-            <ItemTabela name="Destruir bens pessoais" color="#FF9D43" />
-            <ItemTabela name="Machucar e agredir" color="#FF9D43" />
-            <ItemTabela name="Empurrar" color="#FF9D43" />
-            <ItemTabela name="Golpear" color="#FF9D43" />
-            <ItemTabela name="Chutar" color="#FF9D43" />
-          </div>
-          <div className="flex flex-col w-full gap-2 animate-screenOpacity">
-            <ItemTabela name="Confinar e prender" color="#E86161" />
-            <ItemTabela name="Ameaçar com armas" color="#E86161" />
-            <ItemTabela name="Ameaçar de morte" color="#E86161" />
-            <ItemTabela name="Abusar sexualmente" color="#E86161" />
-            <ItemTabela name="Espancar e multilar" color="#E86161" />
-            <ItemTabela name="Matar - Feminicídio" color="#E86161" />
+        <div className="flex flex-col h-screen w-full items-center justify-center lg:w-1/2 gap-5 bg-white text-dark-blue">
+          <div className="h-full w-full lg:w-1/2 flex flex-col items-center justify-center my-20 gap-5 overflow-y-auto">
+            <ItemTabela name="Chantagear" color="yellow" />
+            <ItemTabela name="Mentir e enganar" color="yellow" />
+            <ItemTabela name="Ignorar" color="yellow" />
+            <ItemTabela name="Ciúmes excessivos" color="yellow" />
+            <ItemTabela name="Ofender e humilhar" color="yellow" />
+            <ItemTabela name="Intimidar e ameaçar" color="yellow" />
+            <ItemTabela name="Proibir e controlar" color="yellow" />
+            <ItemTabela name="Destruir bens pessoais" color="orange" />
+            <ItemTabela name="Machucar e agredir" color="orange" />
+            <ItemTabela name="Empurrar" color="orange" />
+            <ItemTabela name="Golpear" color="orange" />
+            <ItemTabela name="Chutar" color="orange" />
+            <ItemTabela name="Confinar e prender" color="red" />
+            <ItemTabela name="Ameaçar com armas" color="red" />
+            <ItemTabela name="Ameaçar de morte" color="red" />
+            <ItemTabela name="Abusar sexualmente" color="red" />
+            <ItemTabela name="Espancar e multilar" color="red" />
+            <ItemTabela name="Matar - Feminicídio" color="red" />
           </div>
         </div>
 
