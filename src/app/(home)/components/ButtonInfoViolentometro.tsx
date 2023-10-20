@@ -18,7 +18,7 @@ export function ButtonInfo(props: ButtonInfoProps) {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
-    <>
+    <div className="flex w-full justify-center items-center">
       <button
         onClick={onOpen}
         className="h-14 w-72 flex items-center justify-center p-5 bg-white rounded-full text-pink transition-all border-2 border-transparent hover:border-pink"
@@ -42,6 +42,6 @@ export function ButtonInfo(props: ButtonInfoProps) {
           </div>
         </ModalContent>
       </Modal>
-    </>
+    </div>
   )
 }
