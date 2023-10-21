@@ -11,7 +11,7 @@ export default function Resultado() {
             lg:bg-[url('../../public/main_content.svg')] bg-no-repeat bg-center bg-cover
             overflow-hidden"
       >
-        <div className="flex flex-col w-full lg:h-screen items-center justify-center lg:w-1/2 gap-5 mt-16 bg-white text-dark-blue lg:shadow-inner-shadow">
+        <div className="flex flex-col w-full lg:h-screen items-center justify-center lg:w-1/2 gap-5 mt-16 bg-white text-dark-blue lg:shadow-inner-shadow lg:rounded-r-full">
           <div className="h-full w-full lg:w-1/2 flex flex-col items-center justify-center my-20 px-10 lg:p-0 gap-5">
             <div className="flex flex-col gap-2 w-full">
               <ItemTabela name="Chantagear" color="yellow" />
