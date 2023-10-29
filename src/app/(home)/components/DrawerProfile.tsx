@@ -1,4 +1,5 @@
 'use client'
+import UseAuth from '@/service/hooks/useAuth'
 import {
   Drawer,
   DrawerOverlay,
@@ -12,6 +13,7 @@ import { HiX } from 'react-icons/hi'
 
 export function DrawerProfile() {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const { logout } = UseAuth()
   return (
     <>
       <Button
@@ -45,7 +47,7 @@ export function DrawerProfile() {
             </div>
             <footer className="w-full flex items-center justify-end p-5 gap-2 text-pink">
               <Power className="text-xl" />
-              <button>Sair da conta</button>
+              <button onClick={logout}>Sair da conta</button>
             </footer>
           </div>
         </DrawerContent>

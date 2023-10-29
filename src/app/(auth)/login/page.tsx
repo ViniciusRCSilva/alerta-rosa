@@ -6,7 +6,7 @@ import { Icon } from '@chakra-ui/react'
 import UseAuth from '@/service/hooks/useAuth'
 
 export default function Login() {
-  const { loginGoogle, logout } = UseAuth()
+  const { loginGoogle } = UseAuth()
 
   return (
     <div className="flex flex-col items-center justify-center gap-5 lg:gap-10 animate-screenOpacity">
@@ -44,10 +44,7 @@ export default function Login() {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row lg:items-center gap-10">
-        <button
-          onClick={logout}
-          className="bg-pink text-white p-2 px-5 rounded-full"
-        >
+        <button className="bg-pink text-white p-2 px-5 rounded-full">
           Entrar
         </button>
         <div className="flex flex-col items-center lg:items-end">

@@ -1,6 +1,6 @@
 'use client'
 import { ProviderUser } from '@/core/ProviderUser'
-import { UserProps } from '@/core/User'
+import { User, UserProps } from '@/core/User'
 import { auth } from '@/firebase/config'
 import { AuthenticationProvider } from '@/provider/AuthenticationProvider'
 import { onAuthStateChanged } from 'firebase/auth'
@@ -11,6 +11,7 @@ interface AuthContextProps {
   user: UserProps | null
   loading: boolean
   loginGoogle(): Promise<void>
+  submitUser(user: UserProps): Promise<void>
   logout(): Promise<void>
 }
 
@@ -18,6 +19,7 @@ const AuthContext = createContext<AuthContextProps>({
   user: null,
   loading: false,
   loginGoogle: async () => Promise.resolve(),
+  submitUser: async () => Promise.resolve(),
   logout: async () => Promise.resolve(),
 })
 
@@ -38,9 +40,17 @@ export function AuthProvider(props: any) {
     setLoading(false)
   }
 
+  async function submitUser(user: UserProps) {
+    setLoading(true)
+    const userCreated = new User(user)
+    await authentication.submitUser(userCreated)
+    setLoading(false)
+  }
+
   async function logout() {
     setLoading(true)
     await authentication.logout()
+    push('/login')
     setLoading(false)
   }
 
@@ -60,7 +70,9 @@ export function AuthProvider(props: any) {
   }, [])
 
   return (
-    <AuthContext.Provider value={{ user, loginGoogle, loading, logout }}>
+    <AuthContext.Provider
+      value={{ user, loginGoogle, submitUser, loading, logout }}
+    >
       {props.children}
     </AuthContext.Provider>
   )
