@@ -1,12 +1,11 @@
 'use client'
 import { EnvelopeSimple, Password } from '@phosphor-icons/react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import UseAuth from '@/service/hooks/useAuth'
-import { useEffect, useState } from 'react'
-import { UserProps } from '@/core/User'
 
 const createRegisterFormSchema = z.object({
   name: z.string().nonempty('O nome é obrigatório!'),
@@ -28,6 +27,7 @@ type CreateRegisterFormData = z.infer<typeof createRegisterFormSchema>
 
 export default function Register() {
   const { submitUser, user, createUserPassword } = UseAuth()
+  const { push } = useRouter()
   const {
     register,
     handleSubmit,
@@ -41,7 +41,7 @@ export default function Register() {
       await createUserPassword(data.email, data.password)
     }
     await submitUser(data)
-    console.log('data :>> ', data)
+    push('/')
   }
 
   return (
