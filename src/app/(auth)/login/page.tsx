@@ -3,8 +3,11 @@ import Image from 'next/image'
 import { EnvelopeSimple, Password } from '@phosphor-icons/react'
 import Link from 'next/link'
 import { Icon } from '@chakra-ui/react'
+import UseAuth from '@/service/hooks/useAuth'
 
 export default function Login() {
+  const { loginGoogle, logout } = UseAuth()
+
   return (
     <div className="flex flex-col items-center justify-center gap-5 lg:gap-10 animate-screenOpacity">
       <p className="font-bold text-3xl">LOGIN</p>
@@ -41,7 +44,10 @@ export default function Login() {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row lg:items-center gap-10">
-        <button className="bg-pink text-white p-2 px-5 rounded-full">
+        <button
+          onClick={logout}
+          className="bg-pink text-white p-2 px-5 rounded-full"
+        >
           Entrar
         </button>
         <div className="flex flex-col items-center lg:items-end">
@@ -56,7 +62,10 @@ export default function Login() {
         <p>ou</p>
         <div className="h-1 px-14 bg-pink rounded-full" />
       </div>
-      <button className="flex flex-row items-center gap-4 p-2 px-5 border-2 border-dark-blue bg-white rounded-full">
+      <button
+        onClick={loginGoogle}
+        className="flex flex-row items-center gap-4 p-2 px-5 border-2 border-dark-blue bg-white rounded-full"
+      >
         <Image src={'google_icon.svg'} alt="google" height={25} width={25} />
         Entrar com Google
       </button>

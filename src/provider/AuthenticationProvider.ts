@@ -9,19 +9,14 @@ import {
   collection,
   doc,
   getDocs,
-  limit,
-  orderBy,
   query,
   setDoc,
-  updateDoc,
   where,
 } from 'firebase/firestore'
-import Router from 'next/router'
-import { deleteCookie, setCookie } from 'cookies-next'
 
 import { auth, db } from '../firebase/config'
 import { ProviderUserProps } from '../core/ProviderUser'
-import { Percentage, User } from '../core/User'
+import { User } from '../core/User'
 
 export class AuthenticationProvider implements ProviderUserProps {
   private _provider = new GoogleAuthProvider()
@@ -52,15 +47,6 @@ export class AuthenticationProvider implements ProviderUserProps {
     createUserWithEmailAndPassword(auth, email, password)
   }
 
-  async updateUser(user: User): Promise<void> {
-    const userRef = doc(db, 'users', user.email)
-
-    await updateDoc(userRef, {
-      name: user.name,
-      phone: user.phone,
-    })
-  }
-
   async getUser(user: User): Promise<User | false> {
     const searchedUser = query(
       collection(db, 'users'),
@@ -82,95 +68,7 @@ export class AuthenticationProvider implements ProviderUserProps {
     })
   }
 
-  async submitPercentages(
-    percentages: Percentage,
-    email: string,
-  ): Promise<void> {
-    const userRef = doc(db, 'users', email)
-
-    await updateDoc(userRef, {
-      percentages,
-    })
-  }
-
   async logout(): Promise<void> {
     await signOut(auth)
-    deleteCookie('Admin-QuizDev')
-    Router.push('/login')
-  }
-
-  async getPercentages(email: string): Promise<Percentage> {
-    const searchedUser = query(
-      collection(db, 'users'),
-      where('email', '==', email),
-    )
-    const docSnap = await getDocs(searchedUser)
-
-    return new Promise((resolve, reject) => {
-      try {
-        docSnap.forEach((doc) => {
-          resolve(doc.data().percentages)
-        })
-      } catch (error) {
-        reject(error)
-      }
-    })
-  }
-
-  async getUserLogged(cookie: string): Promise<User> {
-    const searchedUser = query(
-      collection(db, 'users'),
-      where('email', '==', cookie),
-    )
-    const resolveQuery = getDocs(searchedUser)
-
-    return new Promise((resolve, reject) => {
-      try {
-        resolveQuery.then((list) => {
-          list.forEach((doc) => {
-            resolve(
-              new User({
-                name: doc.data().name,
-                email: doc.data().email,
-                phone: doc.data().phone,
-                percentages: doc.data().percentages ?? {
-                  orangePorcentage: 0,
-                  redPorcentage: 0,
-                  yellowPorcentage: 0,
-                },
-                city: doc.data().city ?? '',
-                state: doc.data().state ?? '',
-              }),
-            )
-          })
-        })
-      } catch (error) {
-        reject(error)
-      }
-    })
-  }
-
-  async getRankingUsers(): Promise<User[]> {
-    const searchedUser = query(collection(db, 'users'))
-    const q = query(searchedUser, orderBy('xp', 'desc'), limit(3))
-    const rankingUsers: User[] = []
-
-    return new Promise((resolve, reject) => {
-      try {
-        getDocs(q).then((list) => {
-          list.forEach((doc) => {
-            rankingUsers.push(doc.data() as User)
-          })
-        })
-
-        resolve(rankingUsers)
-      } catch (error) {
-        reject(error)
-      }
-    })
-  }
-
-  static setCookieUser(user: User) {
-    setCookie('Admin-QuizDev', user.email)
   }
 }

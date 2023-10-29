@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import { Lexend } from 'next/font/google'
 import { ChakraProvider } from '@chakra-ui/react'
 
+import { AuthProvider } from '../service/context/AuthContext'
+
 const lexend = Lexend({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -17,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={lexend.className}>
-        <ChakraProvider>{children}</ChakraProvider>
+        <AuthProvider>
+          <ChakraProvider>{children}</ChakraProvider>
+        </AuthProvider>
       </body>
     </html>
   )
