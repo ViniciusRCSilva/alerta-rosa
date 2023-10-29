@@ -5,6 +5,8 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import UseAuth from '@/service/hooks/useAuth'
+import { useEffect, useState } from 'react'
+import { UserProps } from '@/core/User'
 
 const createRegisterFormSchema = z.object({
   name: z.string().nonempty('O nome é obrigatório!'),
@@ -25,6 +27,7 @@ const createRegisterFormSchema = z.object({
 type CreateRegisterFormData = z.infer<typeof createRegisterFormSchema>
 
 export default function Register() {
+  const { submitUser, user, createUserPassword } = UseAuth()
   const {
     register,
     handleSubmit,
@@ -33,10 +36,12 @@ export default function Register() {
     resolver: zodResolver(createRegisterFormSchema),
   })
 
-  const { submitUser, user } = UseAuth()
-
   async function handleRegisterSubmit(data: CreateRegisterFormData) {
+    if (!user?.email) {
+      await createUserPassword(data.email, data.password)
+    }
     await submitUser(data)
+    console.log('data :>> ', data)
   }
 
   return (
@@ -48,26 +53,48 @@ export default function Register() {
       >
         <div className="flex flex-row items-center rounded-full border-2 p-2 px-5 border-pink bg-white">
           <EnvelopeSimple className="text-2xl text-pink" />
-          <input
-            className="px-2 focus:outline-none"
-            type="text"
-            placeholder="Name"
-            value={user?.name ?? ''}
-            required
-            {...register('name')}
-          />
+          {user?.name ? (
+            <input
+              className="px-2 focus:outline-none"
+              type="text"
+              placeholder="Name"
+              required
+              value={user.name}
+              readOnly
+              {...register('name')}
+            />
+          ) : (
+            <input
+              className="px-2 focus:outline-none"
+              type="text"
+              placeholder="Name"
+              required
+              {...register('name')}
+            />
+          )}
         </div>
         {errors.name && <span>{errors.name.message}</span>}
         <div className="flex flex-row items-center rounded-full border-2 p-2 px-5 border-pink bg-white">
           <EnvelopeSimple className="text-2xl text-pink" />
-          <input
-            className="px-2 focus:outline-none"
-            type="email"
-            placeholder="Email"
-            value={user?.email ?? ''}
-            required
-            {...register('email')}
-          />
+          {user?.email ? (
+            <input
+              className="px-2 focus:outline-none"
+              type="email"
+              placeholder="Email"
+              required
+              value={user.email}
+              readOnly
+              {...register('email')}
+            />
+          ) : (
+            <input
+              className="px-2 focus:outline-none"
+              type="email"
+              placeholder="Email"
+              required
+              {...register('email')}
+            />
+          )}
         </div>
         {errors.email && <span>{errors.email.message}</span>}
         <div className="flex flex-row items-center rounded-full border-2 p-2 px-5 border-pink bg-white">

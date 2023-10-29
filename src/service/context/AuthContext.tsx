@@ -11,6 +11,7 @@ interface AuthContextProps {
   user: UserProps | null
   loading: boolean
   loginGoogle(): Promise<void>
+  createUserPassword(email: string, password: string): Promise<void>
   submitUser(user: UserProps): Promise<void>
   logout(): Promise<void>
 }
@@ -19,6 +20,7 @@ const AuthContext = createContext<AuthContextProps>({
   user: null,
   loading: false,
   loginGoogle: async () => Promise.resolve(),
+  createUserPassword: async () => Promise.resolve(),
   submitUser: async () => Promise.resolve(),
   logout: async () => Promise.resolve(),
 })
@@ -36,7 +38,13 @@ export function AuthProvider(props: any) {
       email: res.email ?? '',
       name: res.name ?? '',
     })
-    push('/')
+    push('/cadastro')
+    setLoading(false)
+  }
+
+  async function createUserPassword(email: string, password: string) {
+    setLoading(true)
+    await authentication.createUserPassword(email, password)
     setLoading(false)
   }
 
@@ -71,7 +79,14 @@ export function AuthProvider(props: any) {
 
   return (
     <AuthContext.Provider
-      value={{ user, loginGoogle, submitUser, loading, logout }}
+      value={{
+        user,
+        loginGoogle,
+        submitUser,
+        createUserPassword,
+        loading,
+        logout,
+      }}
     >
       {props.children}
     </AuthContext.Provider>
