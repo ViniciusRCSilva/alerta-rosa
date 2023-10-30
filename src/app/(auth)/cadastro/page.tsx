@@ -1,15 +1,13 @@
 'use client'
 import {
   EnvelopeSimple,
-  MapPin,
-  MapTrifold,
   Password,
   Phone,
   UserCircle,
 } from '@phosphor-icons/react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { number, z } from 'zod'
+import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import UseAuth from '@/service/hooks/useAuth'
