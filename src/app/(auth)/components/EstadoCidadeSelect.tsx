@@ -23,10 +23,11 @@ export function EstadoCidadeSelects(props: EstadoCidadeSelectsProps) {
   console.log(estadoAtivo)
 
   useEffect(() => {
+    setEstadoAtivo('AC')
     const cidadeSelecionada = estados.find((cid) => estadoAtivo === cid.sigla)
 
     cidadeSelecionada && setCidadeAtiva(cidadeSelecionada)
-  }, [estadoAtivo])
+  }, [estadoAtivo, estados])
 
   return (
     <div className="flex flex-col gap-5">
