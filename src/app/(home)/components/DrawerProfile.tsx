@@ -9,11 +9,20 @@ import {
   Avatar,
 } from '@chakra-ui/react'
 import { Power } from '@phosphor-icons/react'
+import { useEffect, useState } from 'react'
 import { HiX } from 'react-icons/hi'
 
 export function DrawerProfile() {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const { logout } = UseAuth()
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const { user, logout } = UseAuth()
+
+  useEffect(() => {
+    setName(user!.name)
+    setEmail(user!.email)
+  }, [user])
+
   return (
     <>
       <Button
@@ -28,8 +37,8 @@ export function DrawerProfile() {
         <DrawerOverlay />
         <DrawerContent>
           <div className="h-full w-full flex flex-col items-center justify-center gap-5 bg-[url('../../public/user_background.svg')] bg-no-repeat bg-center bg-cover">
-            <div className="w-full flex items-center justify-end p-5 text-3xl text-pink">
-              <button className="mr-10" onClick={onClose}>
+            <div className="w-full flex items-center justify-end text-3xl text-pink">
+              <button className="mr-20" onClick={onClose}>
                 <HiX />
               </button>
             </div>
@@ -41,11 +50,11 @@ export function DrawerProfile() {
                 border={'1px'}
                 rounded={'full'}
               />
-              <span className="text-2xl font-bold">Usuário</span>
+              <span className="text-2xl font-bold">{name}</span>
               <span className="text-xl font-semibold">DDD + número</span>
-              <span className="text-xl font-semibold">email@email.com</span>
+              <span className="text-xl font-semibold">{email}</span>
             </div>
-            <footer className="w-full flex items-center justify-end p-5 gap-2 text-pink">
+            <footer className="w-full flex items-center justify-end pr-20 gap-2 text-pink">
               <Power className="text-xl" />
               <button onClick={logout}>Sair da conta</button>
             </footer>
