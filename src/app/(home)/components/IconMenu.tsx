@@ -22,7 +22,7 @@ export function IconMenu() {
       >
         <div className="flex flex-col items-end justify-center text-white gap-5 pr-5">
           <Link href="/">Formulário</Link>
-          <Link href="">Opção</Link>
+          <Link href="/medidasProtetivas">Medidas protetivas</Link>
           <Link href="">Opção</Link>
           <DrawerProfile />
         </div>
