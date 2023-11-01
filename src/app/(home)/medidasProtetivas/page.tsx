@@ -1,10 +1,24 @@
+import { MedidasProtetivasTransparent } from '../components/MedidasProtetivasTransparentBg'
+import { MedidasProtetivasWhite } from '../components/MedidasProtetivasWhiteBg'
+
 export default function MedidasProtetivas() {
   return (
-    <div className="h-screen w-full text-dark-blue flex flex-col items-start justify-start bg-white p-20">
-      <div className="flex flex-col w-full h-full animate-screenOpacity">
-        <p className="text-4xl md:text-6xl font-semibold uppercase">
-          Medidas Protetivas
-        </p>
+    <div
+      className="w-full text-dark-blue flex flex-col items-start justify-start
+      bg-[url('../../public/mobile_main_content.svg')]
+      lg:bg-[url('../../public/main_content.svg')] bg-no-repeat bg-center bg-cover"
+    >
+      <div className="animate-screenOpacity">
+        <div className="flex flex-col w-full pt-40 lg:px-20 bg-white">
+          <p className="text-4xl md:text-6xl font-semibold uppercase text-center lg:text-left">
+            Medidas Protetivas
+          </p>
+        </div>
+
+        <MedidasProtetivasWhite />
+        <MedidasProtetivasTransparent />
+        <MedidasProtetivasWhite />
+        <MedidasProtetivasTransparent />
       </div>
     </div>
   )

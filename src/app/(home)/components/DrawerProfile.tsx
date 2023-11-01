@@ -19,8 +19,17 @@ export function DrawerProfile() {
   const { user, logout } = UseAuth()
 
   useEffect(() => {
-    setName(user!.name)
-    setEmail(user!.email)
+    if (user?.name == null) {
+      setName('Usuário não logado')
+    } else {
+      setName(user?.name)
+    }
+
+    if (user?.email == null) {
+      setEmail(' ')
+    } else {
+      setEmail(user?.email)
+    }
   }, [user])
 
   return (
