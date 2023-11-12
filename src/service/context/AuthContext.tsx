@@ -1,4 +1,5 @@
 'use client'
+
 import { ProviderUser } from '@/core/ProviderUser'
 import { User, UserProps } from '@/core/User'
 import { auth } from '@/firebase/config'

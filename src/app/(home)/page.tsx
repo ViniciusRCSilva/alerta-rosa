@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Home() {
   return (
     <main>
@@ -19,9 +21,12 @@ export default function Home() {
             violentômetro e obter uma visão mais clara sobre os diversos tipos
             de violência e seus impactos.
           </span>
-          <button className="h-12 w-52 flex items-center justify-center p-5 bg-white rounded-full text-pink transition-all border-2 border-transparent hover:border-pink">
+          <Link
+            href="/form"
+            className="h-12 w-52 flex items-center justify-center p-5 bg-white rounded-full text-pink transition-all border-2 border-transparent hover:border-pink"
+          >
             Iniciar Formulário
-          </button>
+          </Link>
         </div>
       </div>
     </main>

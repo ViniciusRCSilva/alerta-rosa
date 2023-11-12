@@ -1,5 +1,5 @@
-import { addDoc, collection } from 'firebase/firestore'
-import { ProviderQuestionProps } from '../core/ProviderQuestion'
+import { addDoc, collection, doc, getDocs, setDoc } from 'firebase/firestore'
+import { AnswersProps, ProviderQuestionProps } from '../core/ProviderQuestion'
 
 import { QuestionProps } from '../core/Question'
 import { db } from '../firebase/config'
@@ -175,5 +175,30 @@ export class QuestionProvider implements ProviderQuestionProps {
     })
 
     console.log('Submitted')
+  }
+
+  async get(): Promise<QuestionProps[]> {
+    const questions: QuestionProps[] = []
+    const questionsRef = collection(db, 'questions')
+    const querySnapshot = await getDocs(questionsRef)
+    querySnapshot.forEach((doc) => {
+      questions.push(doc.data() as QuestionProps)
+    })
+
+    return questions
+  }
+
+  async submitAnswer(user: string, answers: AnswersProps[]) {
+    console.log('user :>> ', user)
+    console.log('answers :>> ', answers)
+    const changeToObjectData = answers.reduce(
+      (obj, item) => {
+        obj[item.id] = item
+        return obj
+      },
+      {} as { [key: string]: AnswersProps },
+    )
+
+    await setDoc(doc(db, 'answers', user), changeToObjectData)
   }
 }

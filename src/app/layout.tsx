@@ -4,6 +4,7 @@ import { Lexend } from 'next/font/google'
 import { ChakraProvider } from '@chakra-ui/react'
 
 import { AuthProvider } from '../service/context/AuthContext'
+import { QuestionsProvider } from '../service/context/QuestionsContext'
 
 const lexend = Lexend({ subsets: ['latin'] })
 
@@ -20,7 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={lexend.className}>
         <AuthProvider>
-          <ChakraProvider>{children}</ChakraProvider>
+          <QuestionsProvider>
+            <ChakraProvider>{children}</ChakraProvider>
+          </QuestionsProvider>
         </AuthProvider>
       </body>
     </html>
