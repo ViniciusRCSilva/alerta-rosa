@@ -6,18 +6,23 @@ import { createContext, useState } from 'react'
 
 interface QuestionsContextProps {
   questions: QuestionProps[]
+  answers: AnswersProps[] | null
   get(): Promise<void>
   submitAnswer(user: string, answers: AnswersProps[]): Promise<void>
+  getAnswers(user: string): Promise<void>
 }
 
 const QuestionsContext = createContext<QuestionsContextProps>({
   questions: [],
+  answers: [],
   get: async () => Promise.resolve(),
   submitAnswer: async () => Promise.resolve(),
+  getAnswers: async () => Promise.resolve(),
 })
 
 export function QuestionsProvider(props: any) {
   const [questions, setQuestions] = useState<QuestionProps[]>([])
+  const [answers, setAnswers] = useState<AnswersProps[] | null>([])
   const providerQuestions = new ProviderQuestion(new QuestionProvider())
 
   async function get() {
@@ -29,12 +34,19 @@ export function QuestionsProvider(props: any) {
     await providerQuestions.submitAnswer(user, answers)
   }
 
+  async function getAnswers(user: string) {
+    const answers = await providerQuestions.getAnswers(user)
+    setAnswers(answers)
+  }
+
   return (
     <QuestionsContext.Provider
       value={{
         questions,
         get,
         submitAnswer,
+        getAnswers,
+        answers,
       }}
     >
       {props.children}

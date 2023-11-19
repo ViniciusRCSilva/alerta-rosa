@@ -1,4 +1,11 @@
-import { addDoc, collection, doc, getDocs, setDoc } from 'firebase/firestore'
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  setDoc,
+} from 'firebase/firestore'
 import { AnswersProps, ProviderQuestionProps } from '../core/ProviderQuestion'
 
 import { QuestionProps } from '../core/Question'
@@ -189,8 +196,6 @@ export class QuestionProvider implements ProviderQuestionProps {
   }
 
   async submitAnswer(user: string, answers: AnswersProps[]) {
-    console.log('user :>> ', user)
-    console.log('answers :>> ', answers)
     const changeToObjectData = answers.reduce(
       (obj, item) => {
         obj[item.id] = item
@@ -200,5 +205,16 @@ export class QuestionProvider implements ProviderQuestionProps {
     )
 
     await setDoc(doc(db, 'answers', user), changeToObjectData)
+  }
+
+  async getAnswers(user: string): Promise<AnswersProps[] | null> {
+    const docRef = doc(db, 'answers', user)
+    const docSnap = await getDoc(docRef)
+    if (docSnap.exists()) {
+      return Object.values(docSnap.data()) as AnswersProps[]
+    } else {
+      console.log('No such document!')
+      return null
+    }
   }
 }

@@ -29,7 +29,7 @@ export default function Resultado() {
               <ItemTabela name="Golpear" color="orange" />
               <ItemTabela name="Chutar" color="orange" />
             </div>
-            <div className="flex flex-col gap-2 w-full">
+            <div className="flex flex-col gap-2 w-full mb-10">
               <ItemTabela name="Confinar e prender" color="red" />
               <ItemTabela name="Ameaçar com armas" color="red" />
               <ItemTabela name="Ameaçar de morte" color="red" />

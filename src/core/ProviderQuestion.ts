@@ -10,6 +10,7 @@ export interface ProviderQuestionProps {
   create(): Promise<void>
   get(): Promise<QuestionProps[]>
   submitAnswer(user: string, answer: AnswersProps[]): Promise<void>
+  getAnswers(user: string): Promise<AnswersProps[] | null>
 }
 
 export class ProviderQuestion {
@@ -31,5 +32,11 @@ export class ProviderQuestion {
 
   async submitAnswer(user: string, answers: AnswersProps[]) {
     await this._providerRoom.submitAnswer(user, answers)
+  }
+
+  async getAnswers(user: string): Promise<AnswersProps[] | null> {
+    const answers = await this._providerRoom.getAnswers(user)
+
+    return answers
   }
 }

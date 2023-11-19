@@ -1,4 +1,26 @@
+'use client'
+import UseAuth from '@/service/hooks/useAuth'
+import UseQuestions from '@/service/hooks/useQuestions'
+import { useEffect, useState } from 'react'
+import { RenderMensageProps, renderMensage } from './helper/renderMessage'
+
 export default function Resultado() {
+  const { user } = UseAuth()
+  const { getAnswers, answers } = UseQuestions()
+  const [message, setMessage] = useState<RenderMensageProps>()
+
+  useEffect(() => {
+    if (user?.email) {
+      getAnswers(user.email)
+    }
+  }, [user])
+
+  useEffect(() => {
+    if (answers) {
+      setMessage(renderMensage(answers))
+    }
+  }, [answers])
+
   return (
     <main>
       <div
@@ -11,6 +33,17 @@ export default function Resultado() {
           <h1 className="text-4xl md:text-8xl font-semibold uppercase">
             Seu Resultado
           </h1>
+          <h2
+            className={`text-xl md:text-4xl font-semibold uppercase ${
+              message?.value === 'red'
+                ? 'text-red-500'
+                : message?.value === 'orange'
+                ? 'text-orange-500'
+                : 'text-green-500'
+            }`}
+          >
+            {message?.value}
+          </h2>
           <span className="block md:w-3/4 font-light text-center lg:text-justify text-lg lg:text-2xl px-8 lg:p-0">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
             aliquam accusamus autem necessitatibus distinctio reiciendis dolore
