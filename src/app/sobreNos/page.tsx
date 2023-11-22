@@ -41,8 +41,8 @@ export default function AboutUs() {
       <div
         className="flex flex-col items-start justify-start h-screen w-full p-1 md:p-10 lg:p-20
         text-white 
-        bg-[url('../../public/liquid_background.svg')]
-        lg:bg-[url('../../public/liquid_background.svg')] bg-no-repeat bg-center bg-cover"
+        bg-[url('../../public/objective_background.svg')]
+        lg:bg-[url('../../public/objective_background.svg')] bg-no-repeat bg-center bg-cover"
       >
         <main className="gap-20 h-full w-full flex flex-col items-center lg:items-start justify-center">
           <span className="text-4xl lg:text-6xl font-semibold uppercase text-center">
