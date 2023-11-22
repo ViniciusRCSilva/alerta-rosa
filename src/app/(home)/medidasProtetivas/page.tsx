@@ -9,7 +9,7 @@ export default function MedidasProtetivas() {
       lg:bg-[url('../../public/main_content.svg')] bg-no-repeat bg-center bg-cover"
     >
       <div className="animate-screenOpacity">
-        <div className="flex flex-col w-full pt-40 lg:px-20 bg-white">
+        <div className="flex flex-col w-full py-40 lg:pl-20 bg-white">
           <p className="text-4xl md:text-6xl font-semibold uppercase text-center lg:text-left">
             Medidas Protetivas
           </p>
