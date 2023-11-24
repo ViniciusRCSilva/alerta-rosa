@@ -1,6 +1,10 @@
 export function MedidasProtetivasWhite() {
   return (
-    <div className="flex flex-col lg:flex-row w-full items-center justify-between bg-white py-20 lg:p-0">
+    <div
+      className="flex flex-col lg:flex-row w-full items-center justify-between py-20 lg:p-0
+        lg:bg-[url('../../public/right_side_background.svg')] 
+        bg-[url('../../public/mobile_background_login.svg')] bg-no-repeat bg-cover"
+    >
       <div
         className="block lg:hidden w-40 h-40 rounded-lg
             bg-[url('../../public/image_hand_X.svg')]
