@@ -16,7 +16,8 @@ export function Header() {
         <div className="hidden lg:flex flex-row items-center justify-center text-white gap-5">
           <Link href="/">Formulário</Link>
           <Link href="/medidasProtetivas">Medidas protetivas</Link>
-          <Link href="">Opção</Link>
+          <Link href="/legislacao">Legislação</Link>
+          <Link href="/contatos">Contatos</Link>
           <DrawerProfile />
         </div>
         <div className="flex lg:hidden flex-row text-white gap-5">
