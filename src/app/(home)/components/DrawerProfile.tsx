@@ -32,6 +32,8 @@ export function DrawerProfile() {
     }
   }, [user])
 
+  console.log('user :>> ', user)
+
   return (
     <>
       <Button
@@ -59,9 +61,11 @@ export function DrawerProfile() {
                 border={'1px'}
                 rounded={'full'}
               />
-              <span className="text-2xl font-bold">{name}</span>
-              <span className="text-xl font-semibold">DDD + número</span>
-              <span className="text-xl font-semibold">{email}</span>
+              <span className="text-2xl font-bold">{user?.name}</span>
+              <span className="text-xl font-semibold">
+                {user?.phone?.length ? user?.phone : 'Número não informado'}
+              </span>
+              <span className="text-xl font-semibold">{user?.email}</span>
             </div>
             <footer className="w-full flex items-center justify-end pr-20 gap-2 text-pink">
               <Power className="text-xl" />

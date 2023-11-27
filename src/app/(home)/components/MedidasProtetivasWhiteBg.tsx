@@ -1,4 +1,8 @@
-export function MedidasProtetivasWhite() {
+interface MedidasProtetivasWhiteProps {
+  text?: string
+}
+
+export function MedidasProtetivasWhite(props: MedidasProtetivasWhiteProps) {
   return (
     <div
       className="flex flex-col lg:flex-row w-full items-center justify-between py-20 lg:p-0
@@ -14,10 +18,11 @@ export function MedidasProtetivasWhite() {
       <div className="flex flex-col w-3/4 items-center lg:items-start gap-2 p-0 lg:pl-20">
         <h1 className="text-pink text-2xl lg:text-4xl font-medium">Título</h1>
         <p className="block font-light text-center lg:text-left text-lg lg:text-2xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, atque,
+          {props.text ??
+            `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, atque,
           dignissimos, at rerum saepe sapiente alias porro nisi pariatur placeat
           molestiae architecto sint nostrum inventore vero dolorem qui?
-          Reprehenderit, ipsum?
+          Reprehenderit, ipsum?`}
         </p>
       </div>
 

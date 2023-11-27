@@ -43,7 +43,7 @@ export function renderMensage(list: AnswersProps[]): RenderMensageProps {
 
   if (maxValue === 0) {
     return {
-      value: 'invalid',
+      value: 'Provavelmente não corre risco de agressão!',
       redPercentage,
       orangePercentage,
       yellowPercentage,
