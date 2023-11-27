@@ -213,7 +213,6 @@ export class QuestionProvider implements ProviderQuestionProps {
     if (docSnap.exists()) {
       return Object.values(docSnap.data()) as AnswersProps[]
     } else {
-      console.log('No such document!')
       return null
     }
   }

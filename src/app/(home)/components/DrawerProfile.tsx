@@ -32,8 +32,6 @@ export function DrawerProfile() {
     }
   }, [user])
 
-  console.log('user :>> ', user)
-
   return (
     <>
       <Button

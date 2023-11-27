@@ -2,6 +2,7 @@ import { AnswersProps } from '@/core/ProviderQuestion'
 
 export interface RenderMensageProps {
   value: string
+  message: string
   redPercentage: number
   orangePercentage: number
   yellowPercentage: number
@@ -32,18 +33,14 @@ export function renderMensage(list: AnswersProps[]): RenderMensageProps {
   const yellowPercentage = (yellowFilter / total) * 100
   const percentages = [redPercentage, orangePercentage, yellowPercentage]
 
-  console.log('redFilter :>> ', redFilter)
-  console.log('orangeFilter :>> ', orangeFilter)
-  console.log('yellowFilter :>> ', yellowFilter)
-  console.log('percentages :>> ', percentages)
-
   const maxValue = percentages.reduce((prev, current) =>
     prev > current ? prev : current,
   )
 
   if (maxValue === 0) {
     return {
-      value: 'Provavelmente não corre risco de agressão!',
+      value: 'green',
+      message: 'Provavelmente não corre risco de agressão!',
       redPercentage,
       orangePercentage,
       yellowPercentage,
@@ -52,6 +49,7 @@ export function renderMensage(list: AnswersProps[]): RenderMensageProps {
     if (maxValue === redPercentage) {
       return {
         value: 'red',
+        message: 'Afaste-se! Risco de vida! Procure uma delegacia da mulher.',
         redPercentage,
         orangePercentage,
         yellowPercentage,
@@ -59,6 +57,7 @@ export function renderMensage(list: AnswersProps[]): RenderMensageProps {
     } else if (maxValue === orangePercentage) {
       return {
         value: 'orange',
+        message: 'Tenha cuidado! Reaja! A violência pode aumentar.',
         redPercentage,
         orangePercentage,
         yellowPercentage,
@@ -66,6 +65,7 @@ export function renderMensage(list: AnswersProps[]): RenderMensageProps {
     } else if (maxValue === yellowPercentage) {
       return {
         value: 'yellow',
+        message: 'Reaja, você está em risco, procure ajuda!',
         redPercentage,
         orangePercentage,
         yellowPercentage,
@@ -73,6 +73,7 @@ export function renderMensage(list: AnswersProps[]): RenderMensageProps {
     } else {
       return {
         value: 'normal',
+        message: 'Provavelmente não corre risco de agressão!',
         redPercentage,
         orangePercentage,
         yellowPercentage,

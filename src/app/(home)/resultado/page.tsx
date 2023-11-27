@@ -33,23 +33,32 @@ export default function Resultado() {
           <h1 className="text-4xl md:text-8xl font-semibold uppercase">
             Seu Resultado
           </h1>
-          <h2
-            className={`text-xl md:text-4xl font-semibold uppercase ${
-              message?.value === 'red'
-                ? 'text-red-500'
-                : message?.value === 'orange'
-                ? 'text-orange-500'
-                : 'text-green-500'
-            }`}
-          >
-            {message?.value}
-          </h2>
-          <span className="block md:w-3/4 font-light text-center lg:text-justify text-lg lg:text-2xl px-8 lg:p-0">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
-            aliquam accusamus autem necessitatibus distinctio reiciendis dolore
-            eius, neque sed fuga velit aperiam quae rem iure accusantium
-            laboriosam consequatur eum quas!
-          </span>
+          {message?.value && (
+            <>
+              <h2
+                className={`text-xl md:text-4xl font-semibold uppercase ${
+                  message.value === 'red'
+                    ? 'text-red-500'
+                    : message?.value === 'orange'
+                    ? 'text-orange-500'
+                    : 'text-green-500'
+                }`}
+              >
+                {message.message}
+              </h2>
+              <span className="block md:w-3/4 font-light text-center lg:text-justify text-lg lg:text-2xl px-8 lg:p-0">
+                Obrigada por participar do &quot;Alerta Rosa&quot;. Lembre-se,
+                os resultados do nosso quiz são apenas indicativos, baseados nas
+                suas respostas. Eles não substituem um diagnóstico profissional.
+                A violência contra mulheres é um assunto sério que requer
+                avaliação e suporte profissional. Caso necessário, busque ajuda
+                de especialistas qualificados para orientação e apoio adequados.
+                Este projeto é um primeiro passo para conscientização. Você não
+                está sozinha e merece todo o apoio necessário.
+              </span>
+            </>
+          )}
+
           <button className="h-12 w-60 flex items-center justify-center p-5 bg-white rounded-full text-pink transition-all border-2 border-transparent hover:border-pink">
             Visualizar Violentômetro
           </button>

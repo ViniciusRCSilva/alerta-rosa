@@ -54,10 +54,6 @@ export default function Form() {
     get()
   }, [])
 
-  useEffect(() => {
-    console.log('answers :>> ', answers)
-  }, [answers])
-
   return (
     <div
       className="h-screen w-full text-white flex flex-col items-start justify-start

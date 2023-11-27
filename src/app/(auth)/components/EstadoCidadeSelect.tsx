@@ -20,8 +20,6 @@ export function EstadoCidadeSelects(props: EstadoCidadeSelectsProps) {
   const [cidadeAtiva, setCidadeAtiva] = useState<Estado | null>(null)
   const estados = data.estados
 
-  console.log(estadoAtivo)
-
   useEffect(() => {
     setEstadoAtivo('AC')
     const cidadeSelecionada = estados.find((cid) => estadoAtivo === cid.sigla)
