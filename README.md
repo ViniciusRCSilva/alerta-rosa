@@ -37,7 +37,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 TODO:
 
-- Adicionar sinais na página
-- Terminar cadastro de verificar tudo de fluxo
+- Implementar login com email e senha
 
 

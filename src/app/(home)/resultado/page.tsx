@@ -3,6 +3,7 @@ import UseAuth from '@/service/hooks/useAuth'
 import UseQuestions from '@/service/hooks/useQuestions'
 import { useEffect, useState } from 'react'
 import { RenderMensageProps, renderMensage } from './helper/renderMessage'
+import Link from 'next/link'
 
 export default function Resultado() {
   const { user } = UseAuth()
@@ -59,9 +60,12 @@ export default function Resultado() {
             </>
           )}
 
-          <button className="h-12 w-60 flex items-center justify-center p-5 bg-white rounded-full text-pink transition-all border-2 border-transparent hover:border-pink">
+          <Link
+            href="/violentometro"
+            className="h-12 w-60 flex items-center justify-center p-5 bg-white rounded-full text-pink transition-all border-2 border-transparent hover:border-pink"
+          >
             Visualizar Violentômetro
-          </button>
+          </Link>
         </div>
       </div>
     </main>

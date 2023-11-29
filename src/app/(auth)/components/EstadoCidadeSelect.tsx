@@ -31,7 +31,7 @@ export function EstadoCidadeSelects(props: EstadoCidadeSelectsProps) {
     <div className="flex flex-col gap-5">
       <div className="flex flex-row items-center rounded-full border-2 p-2 px-5 border-pink bg-white">
         <MapTrifold className="text-2xl text-pink" />
-        <select className="px-2 focus:outline-none">
+        <select className="px-2 focus:outline-none" {...props.state}>
           <option disabled>Selecione um estado</option>
           {estados.map((estado) => (
             <option key={estado.sigla} value={estado.sigla}>

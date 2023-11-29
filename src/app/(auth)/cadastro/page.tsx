@@ -180,6 +180,7 @@ export default function Register() {
                     placeholder="Contato"
                     maxLength={11}
                     required
+                    {...register('phone')}
                   />
                 </div>
                 {errors.phone && <span>{errors.phone.message}</span>}
