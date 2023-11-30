@@ -4,11 +4,11 @@ import AccordionComponent from './components/Accordion'
 export default function Legislation() {
   return (
     <div
-      className="w-full text-dark-blue flex flex-col items-start justify-start lg:px-20
+      className="h-screen w-full text-dark-blue flex flex-col items-start justify-start lg:px-20
       lg:bg-[url('../../public/right_side_background.svg')] 
       bg-[url('../../public/mobile_background_login.svg')] bg-no-repeat bg-center bg-cover"
     >
-      <div className="animate-screenOpacity">
+      <div className="w-full animate-screenOpacity p-2">
         <p className="text-4xl md:text-6xl font-semibold uppercase pb-10 pt-40 text-center lg:text-left">
           Legislação:
         </p>

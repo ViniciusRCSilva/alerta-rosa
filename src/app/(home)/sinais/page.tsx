@@ -60,7 +60,7 @@ export default function MedidasProtetivas() {
         </div>
 
         <div
-          className="flex flex-col lg:flex-row w-full items-center justify-between py-20 lg:p-0
+          className="flex flex-col lg:flex-row h-[35rem] w-full items-center justify-between py-20 lg:p-0
         lg:bg-[url('../../public/right_side_background.svg')] 
         bg-[url('../../public/mobile_background_login.svg')] bg-no-repeat bg-cover"
         >

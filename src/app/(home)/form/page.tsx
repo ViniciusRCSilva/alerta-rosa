@@ -76,10 +76,10 @@ export default function Form() {
           {questions.length ? currentIndex + 1 : 0}/{questions.length}
         </span>
       </div>
-      <div className="h-96 w-full py-10 px-20 text-xl flex items-start lg:items-center text-center justify-center overflow-y-auto animate-screenOpacity">
-        <p className="text-4xl">{questions[currentIndex]?.enunciation}</p>
+      <div className="h-full w-full flex items-center justify-center  ">
+        <p className="text-4xl p-10">{questions[currentIndex]?.enunciation}</p>
       </div>
-      <div className="fixed bottom-0 h-44 w-full flex items-center justify-between bg-white text-dark-blue shadow-form-shadow">
+      <div className="h-80 w-full flex items-center justify-between bg-white text-dark-blue shadow-form-shadow">
         <button
           onClick={handlePreviousQuestions}
           className="ml-5 flex items-center justify-between text-base lg:text-xl cursor-pointer"
