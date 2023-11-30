@@ -49,15 +49,6 @@ export class AuthenticationProvider implements ProviderUserProps {
   }
 
   async getUser(user: User): Promise<User | false> {
-    // const searchedUser = query(
-    //   collection(db, 'users'),
-    //   where('email', '==', user.email),
-    // )
-
-    // const resolveQuery = await getDocs(searchedUser)
-    // console.log('resolveQuery :>> ', resolveQuery)
-
-    // return resolveQuery.empty ? false : user
     const docRef = doc(db, 'users', user.email)
     const docSnap = await getDoc(docRef)
 
