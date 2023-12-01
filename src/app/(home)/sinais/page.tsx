@@ -22,7 +22,7 @@ export default function MedidasProtetivas() {
             <h1 className="text-pink text-2xl lg:text-4xl font-medium">
               X Desenhado
             </h1>
-            <p className="block font-light text-center lg:text-left text-lg lg:text-2xl bg-white p-10 bg-opacity-60 rounded-lg">
+            <p className="block font-light text-center lg:text-left text-lg lg:text-2xl bg-white p-10 rounded-full lg:rounded-tl-none border-2 border-pink shadow-md">
               O X vermelho desenhado na palma da mão faz parte de uma campanha
               mundial para amparar mulheres em situação de violência doméstica.
               Essa foi uma maneira discreta, rápida e simples para que mulheres
@@ -46,7 +46,7 @@ export default function MedidasProtetivas() {
             <h1 className="text-pink text-2xl lg:text-4xl font-medium">
               Fingir ligação
             </h1>
-            <p className="block font-light text-center lg:text-right text-lg lg:text-2xl bg-white p-10 bg-opacity-60 rounded-lg">
+            <p className="block font-light text-center lg:text-right text-lg lg:text-2xl bg-white p-10 rounded-full lg:rounded-tr-none border-2 border-pink shadow-md">
               Se uma mulher se sentir em perigo e não puder falar abertamente,
               ela pode sinalizar discretamente levantando a mão e abrindo a
               palma, como se estivesse pedindo para parar. Também pode simular
@@ -67,22 +67,13 @@ export default function MedidasProtetivas() {
             <h1 className="text-pink text-2xl lg:text-4xl font-medium">
               Guia de pedido de ajuda
             </h1>
-            <p className="block font-light text-center lg:text-justify text-lg lg:text-2xl bg-white p-10 bg-opacity-60 rounded-lg">
-              Um dos sinais mais conhecidos e amplamente divulgados para
-              mulheres indicarem discretamente que estão em uma situação de
-              violência é o &quot;Sinal de Ajuda&quot;, também conhecido como
-              &quot;Sinal de Violência Doméstica&quot;. Este sinal foi
-              popularizado pela Fundação Canadense de Mulheres e consiste em uma
-              mulher colocar a mão com a palma para cima, dobrar o polegar e, em
-              seguida, fechar os outros dedos sobre o polegar, simulando uma
-              espécie de punho. Este gesto se tornou um código visual
-              internacional para pedir ajuda, especialmente em situações onde a
-              vítima não pode falar abertamente sobre o abuso que está sofrendo.
-              A eficácia deste sinal tem sido comprovada em diversos casos
-              relatados na internet, onde mulheres usaram o gesto em chamadas de
-              vídeo ou mesmo presencialmente para indicar a terceiros que
-              estavam em perigo. É um método discreto e eficaz para comunicar a
-              necessidade de ajuda sem alertar o agressor.
+            <p className="block font-light text-center lg:text-left text-lg lg:text-2xl bg-white p-10 rounded-full lg:rounded-tl-none border-2 border-pink shadow-md">
+              O &quot;Sinal de Ajuda&quot; é uma forma discreta, popularizada
+              pela Fundação Canadense de Mulheres, para indicar violência
+              doméstica. Consiste em dobrar o polegar sobre a palma, simulando
+              um punho. Esse gesto tornou-se um código internacional para pedir
+              ajuda sem alertar o agressor, sendo eficaz em situações onde a
+              vítima não pode falar abertamente sobre o abuso.
             </p>
           </div>
           <div
