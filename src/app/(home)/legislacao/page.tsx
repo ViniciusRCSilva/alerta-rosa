@@ -10,7 +10,7 @@ export default function Legislation() {
     >
       <div className="w-full animate-screenOpacity p-2">
         <p className="text-4xl md:text-6xl font-semibold uppercase pb-10 pt-40 text-center lg:text-left">
-          Legislação:
+          Legislação
         </p>
 
         <Accordion allowToggle>
