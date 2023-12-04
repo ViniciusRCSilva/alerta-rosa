@@ -49,7 +49,7 @@ export function renderMensage(list: AnswersProps[]): RenderMensageProps {
     if (maxValue === redPercentage) {
       return {
         value: 'red',
-        message: 'Afaste-se! Risco de vida! Procure uma delegacia da mulher.',
+        message: 'Alerta! Vida em perigo. Procure ajuda!',
         redPercentage,
         orangePercentage,
         yellowPercentage,
@@ -73,7 +73,7 @@ export function renderMensage(list: AnswersProps[]): RenderMensageProps {
     } else {
       return {
         value: 'normal',
-        message: 'Provavelmente não corre risco de agressão!',
+        message: 'Alerta! Vida em perigo. Procure ajuda!',
         redPercentage,
         orangePercentage,
         yellowPercentage,
