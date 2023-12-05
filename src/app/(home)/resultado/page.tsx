@@ -37,7 +37,7 @@ export default function Resultado() {
           {message?.value && (
             <>
               <h2
-                className={`text-xl md:text-4xl font-semibold uppercase ${
+                className={`text-xl md:text-3xl font-semibold uppercase bg-white p-4 lg:p-10 text-center rounded-full ${
                   message.value === 'red'
                     ? 'text-red-500'
                     : message?.value === 'orange'
